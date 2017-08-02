@@ -2,12 +2,22 @@ doctype html
 html(lang='en')
   head
     meta(charset='UTF-8')
-    meta(name='viewport', content='width=device-width')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='author', content='UintaGroup')
     title= title
+    link(rel='shortcut icon', href='assets/ico/favicon.png')
     block css
+      link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
       link(rel='stylesheet', href='/css/style.css')
     block js
+      script(src='http://code.jquery.com/jquery-3.2.1.slim.min.js')
+      script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+      script(src='/js/modernizr.custom.js')
       if ENV_DEVELOPMENT
         script(src='http://localhost:35729/livereload.js')
-  body
+    block font
+      <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+  body(data-spy='scroll' data-offset='0' data-target='#theMenu')
+    include nav
     block content
