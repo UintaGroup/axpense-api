@@ -1,17 +1,28 @@
 sudo: required
+
 dist: trusty
+
 git:
   depth: 1
+
 language: node_js
+
 node_js:
 - '6'
 - '7'
 - stable
+
 addons:
   apt:
     sources:
     - google-chrome
     packages:
     - google-chrome-stable
+
 matrix:
   fast_finish: true
+
+before_install:
+  - docker-compose up
+
+  - docker ps
