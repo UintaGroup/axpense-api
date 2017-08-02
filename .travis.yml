@@ -1,4 +1,17 @@
+sudo: required
+dist: trusty
+git:
+  depth: 1
 language: node_js
 node_js:
-- '0.11'
-- '0.10'
+- '6'
+- '7'
+- stable
+addons:
+  apt:
+    sources:
+    - google-chrome
+    packages:
+    - google-chrome-stable
+matrix:
+  fast_finish: true
