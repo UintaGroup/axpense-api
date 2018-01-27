@@ -1,0 +1,35 @@
+static void BtOrTestCreateExpense(Args _args)
+{
+    TrvExpTable         trvExpTable;
+    NumberSeq           numberSequence; //Trav_11, the number is set in NumberSequence table
+    TrvExpNumber        trvExpNumber;
+    RecId               creatingWorker = HcmWorker::findByPersonnelNumber("000056").RecId;//Person Number: 000056 => Oat
+    TrvDestination      trvDestination = "Thailand";
+    TrvTravelTxtEDT     txt2 = "Travel Test V6";
+    RecId               legalEntityRecId = CompanyInfo::find().RecId;
+
+    //Get number sequence object
+    numberSequence = NumberSeq::newGetNumFromCode("Trav_11", NumberSeqScopeFactory::createLegalEntityScope(legalEntityRecId), true);
+    trvExpNumber = numberSequence.num();//Get the next number
+    numberSequence.used();//To reserve the number
+
+    try
+    {
+        ttsBegin;
+        trvExpTable.initValue();//Prefill default date from AX
+        trvExpTable.ApprovalStatus  = TrvAppStatus::Pending;
+        trvExpTable.CreatingWorker  = creatingWorker;
+        trvExpTable.Destination     = trvDestination;
+        trvExpTable.ExpNumber       = trvExpNumber;
+        trvExpTable.Txt2            = txt2;
+        trvExpTable.VendAccount     = "V500364";//This is map in Worker form under Expense management/Map worker to vendor
+        
+        trvExpTable.insert();
+        ttsCommit;
+        info("Expense Created");
+    }
+    catch
+    {
+        error("Expense failed");
+    }
+}
