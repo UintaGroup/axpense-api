@@ -1,0 +1,29 @@
+static void BtOrTestCreateExpenseLines(Args _args)
+{
+    TrvExpTrans     trvExpTrans;
+    str             expNumber = "KTEC-000023";//Get it from ExpenseTable
+    str             expType = "Airline";
+    str             costType = "Airfare";//Can get it from TrvCostType table
+    str             interComLe = "KTEC";
+
+    trvExpTrans.initValue();
+    trvExpTrans.initFromTrvExpTable(expNumber);
+
+    //Require data from web
+    trvExpTrans.AdditionalInformation   = "This is option";//Option
+    trvExpTrans.AmountCurr              = 989;
+    trvExpTrans.CostType                = TrvCostType::find(costType).CostType;
+    trvExpTrans.ExpType                 = TrvExpType::Airline;
+
+    //Set internal in AX
+    trvExpTrans.ExpNumber              = expNumber;
+    trvExpTrans.ApprovalStatus          = TrvAppStatus::Pending;//set it to Inreview
+    trvExpTrans.InterCompanyLE          = interComLe;//Option
+    trvExpTrans.TransDate               = today();
+    
+    //trvExpTrans.ApprovalStatus          = TrvAppStatus::Create;
+    trvExpTrans.setDefaultDimension();//Set DefaultDimension value, data is from what we set on the worker
+    trvExpTrans.insert();
+
+    info("Expense Line Created");
+}
