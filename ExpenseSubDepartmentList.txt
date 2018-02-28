@@ -43,3 +43,44 @@ SS2
 TRD
 WAF
 WHOS
+
+
+List of current SubDepartment:
+Dimension value	          Description
+BDA	                      Blendtec Dealer Alliance
+BIS1	                    Food Items
+BIS2	                    Non Food Items
+BUYG	                    Buying Group
+CAL	                      Call Center
+CHAI	                    Chain Accounts
+COLL	                    Collections
+COM	                      .Com
+DEAL	                    Dealer
+DEMO	                    Demo Account
+DIST	                    Distributor
+DONA	                    Donations
+FAIR	                    Fairs
+FRAUD	                    Fraud
+GEN	                      General Use
+HMS	                      Home Show
+INF	                      Infomercials
+INLI	                    In Line
+KEYA	                    Key Account
+KIOS	                    Kiosk
+LEAN	                    Lean
+MEDI	                    Media
+MILI	                    Military
+MRP	                      Manufacturing Reps
+NAFE	                    NAFED
+OUT	                      Outlet Store
+PROM	                    Promotions
+PROS	                    Product Supplier
+REP	                      Repairs
+RETS	                    Retail
+ROAD	                    Roadshows
+SPEC	                    Specialty Retail.com
+SPER	                    Specialty Retail
+SS2	                      Self Serve
+TRD	                      Tradeshows
+WAF	                      Web Affiliates
+WHOS	                    Wholesale Distribution
