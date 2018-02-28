@@ -21,3 +21,16 @@ INT
 JPN
 KOR
 MEX
+
+List of current Channel:
+Dimension value	        Description
+CAN	                    Canada
+DEU	                    Germany
+DOM	                    Domestic
+ESP	                    Spain
+FRA	                    France
+GBR	                    United Kindgom
+INT	                    International
+JPN	                    Japan
+KOR	                    Korea, Republic of
+MEX	                    Mexico
