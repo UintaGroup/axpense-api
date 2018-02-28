@@ -22,3 +22,18 @@ DISPLAYVALUE
 009
 010
 011
+
+List of current CostCenter:
+Dimension value	      Description
+001	                  Management
+002	                  Accounting
+003	                  Human Resources
+004	                  Quality
+005	                  Sales
+006	                  Engineering
+007	                  Information Technology
+008	                  Production
+009	                  Facilities
+010	                  Production Support
+011	                  Corporate Development / International
+
