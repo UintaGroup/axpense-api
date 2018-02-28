@@ -66,3 +66,52 @@
 1100
 1102
 1104
+
+List of current Department:
+Dimension value	          Description
+0100	                    Management
+0200	                    Financial Accounting
+0202	                    Cost Accounting
+0204	                    Payroll
+0206	                    Purchasing
+0300	                    Human Resources
+0302	                    Bistro
+0304	                    Clinic
+0306	                    Fitness
+0308	                    Training
+0400	                    Quality
+0500	                    Commercial
+0502	                    Retail
+0504	                    Creative
+0506	                    Product / Brand
+0508	                    Digital
+0510	                    Demonstration
+0512	                    Shipping
+0514	                    Sales Operations
+0516	                    Customer Service
+0600	                    Manufacturing
+0602	                    Electrical
+0604	                    Residential
+0605	                    Commercial
+0606	                    Industrial Design Engineering
+0608	                    Fabrication Shop
+0700	                    Software
+0702	                    Systems
+0800	                    Blender Assembly
+0802	                    Mill / Mixer
+0804	                    BDX / Self Serve
+0806	                    INM
+0808	                    PCB
+0810	                    CNC
+0812	                    Manual Jars and Armatures
+0814	                    Service
+0900	                    Maintenance
+0902	                    Custodial
+1000	                    Production Managers
+1002	                    Production Training
+1004	                    Production Control
+1006	                    Receiving
+1100	                    International Business Services
+1102	                    Business Development
+1104	                    Global Logistics
+
